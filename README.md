@@ -1,8 +1,8 @@
 # Ignite UI Components for React
 
 [![Build Status](https://travis-ci.org/IgniteUI/igniteui-react.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)  
-[![NPM version](https://img.shields.io/npm/v/igniteui-react.svg?style=flat)](https://www.npmjs.com/package/igniteui-react)
+[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)
+[![npm version](https://badge.fury.io/js/igniteui-react.svg)](https://badge.fury.io/js/igniteui-react)
 
 Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react/).
 
@@ -41,6 +41,17 @@ To build the project use the following steps:
 
 # Getting Started
 
+## Ignite UI CLI
+To get started with the Ignite UI CLI and the Ignite UI React wrappers:
+
+```
+npm i -g igniteui-cli
+ig new <project name> --framework=react
+cd <project name>
+ig add combo <component name>
+ig start
+```
+
 ## Page setup
 
 In the page markup include the Ignite UI React components bundle found in `dist/npm/igniteui-react.min.js` along with the Ignite UI scripts:
@@ -61,7 +72,7 @@ Optionally include `browser.js` found in the `Babel-core` package for [JSX](http
 This provides all supported Ignite UI components as React classes available in the global namespace.
 
 ## Initializing controls
-In general React components can be initialized in two ways: 
+In general React components can be initialized in two ways:
 
 1. In `JavaScript` using React's API.
 2. With pseudo-markup by utilizing `JSX` syntax.
@@ -103,7 +114,7 @@ Defining complex type control options (`arrays` & `objects`) in `JSX` is done by
 
 #### Example:
 
-	<IgGrid 
+	<IgGrid
 		id="grid1"
 		columns={[
 			{ headerText: "Product ID", key: "ProductID", dataType: "number" },
@@ -131,7 +142,7 @@ Option updates during runtime can be achieved by using React's [setState](https:
 		render: function () {
 			return (
 				<div>
-					<IgGrid 
+					<IgGrid
 						id="grid1"
 						autoGenerateColumns={true}
 						dataSource={sourceData}
@@ -183,6 +194,15 @@ Or get the DOM element it is initialized on and calling the method through jQuer
 ```JavaScript
 	$.ig.react.core.getElement(gridComponent).igGrid("commit");
 ```
+
+## Running our samples:
+
+Go to the folder of the sample you want to run:
+
+	npm install
+	npm start
+
+Alternatively you can view them from [here](https://igniteui.github.io/igniteui-react/).
 
 ## Testing
 
